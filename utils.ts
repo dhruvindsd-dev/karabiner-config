@@ -1,4 +1,4 @@
-import { To, KeyCode, Manipulator, KarabinerRules } from "./types";
+import { KarabinerRules, KeyCode, Manipulator, To } from "./types";
 
 /**
  * Custom way to describe a command in a layer
@@ -34,9 +34,9 @@ export function createHyperSubLayer(
         key_code: sublayer_key,
         modifiers: {
           mandatory: [
-            "left_command",
-            "left_control",
-            "left_shift",
+            "right_command",
+            "right_control",
+            "right_shift",
             "left_option",
           ],
         },
@@ -120,9 +120,9 @@ export function createHyperSubLayers(subLayers: {
                 modifiers: {
                   // Mandatory modifiers are *not* added to the "to" event
                   mandatory: [
-                    "left_command",
-                    "left_control",
-                    "left_shift",
+                    "right_command",
+                    "right_control",
+                    "right_shift",
                     "left_option",
                   ],
                 },
@@ -159,6 +159,9 @@ export function open(what: string): LayerCommand {
   };
 }
 
+export function openInNotion(link: string): LayerCommand {
+  return open(`-a Notion ${link}`);
+}
 /**
  * Shortcut for "Open an app" command (of which there are a bunch)
  */
