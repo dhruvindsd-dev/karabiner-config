@@ -89,7 +89,7 @@ const rules: KarabinerRules[] = [
         "https://www.notion.so/dhruvindev/Figbox-Development-f43bcfc3122147f4be53ac523c4939ec?pvs=4"
       ),
       a: openInNotion(
-        "https://www.notion.so/dhruvindev/An-G-3dc0318fc4954ce3968fa6e9b50361ce?pvs=4"
+        "https://www.notion.so/dhruvindev/Andreas-49b9109d7d5e477a87037a3855c8072b?pvs=4"
       ),
       s: openInNotion(
         "https://www.notion.so/dhruvindev/salonflow-co-570f22e87e2c46d099e737d698b95fc5?pvs=4"
@@ -137,6 +137,7 @@ const rules: KarabinerRules[] = [
     },
     // o = "Open" applications
     o: {
+      v: app("Visual Studio Code"),
       g: app("Arc"),
       a: app("Siri"),
       d: app("Discord"),
@@ -421,6 +422,10 @@ const rules: KarabinerRules[] = [
     },
 
     // single keys
+    semicolon: {
+      description: "Full screen layout",
+      to: [{ key_code: "f", modifiers: ["option", "shift"] }],
+    },
     j: {
       to: [
         {
@@ -447,7 +452,8 @@ const rules: KarabinerRules[] = [
     r: {
       to: [{ key_code: "r", modifiers: ["left_option"] }],
     },
-    'a': { to: [{ key_code: "tab", modifiers: ["right_command"] }] },
+    a: { to: [{ key_code: "tab", modifiers: ["right_command"] }] },
+    g: { to: [{ key_code: "g", modifiers: ["command", "option"] }] },
     1: { to: [{ key_code: "1", modifiers: ["left_option"] }] },
     2: { to: [{ key_code: "2", modifiers: ["left_option"] }] },
     3: { to: [{ key_code: "3", modifiers: ["left_option"] }] },

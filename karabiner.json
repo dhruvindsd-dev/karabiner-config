@@ -317,6 +317,11 @@
                   },
                   {
                     "type": "variable_if",
+                    "name": "hyper_sublayer_semicolon",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
                     "name": "hyper_sublayer_j",
                     "value": 0
                   },
@@ -357,6 +362,11 @@
                   },
                   {
                     "type": "variable_if",
+                    "name": "hyper_sublayer_g",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
                     "name": "hyper_sublayer_t",
                     "value": 0
                   }
@@ -389,10 +399,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a Notion https://www.notion.so/dhruvindev/An-G-3dc0318fc4954ce3968fa6e9b50361ce?pvs=4"
+                    "shell_command": "open -a Notion https://www.notion.so/dhruvindev/Andreas-49b9109d7d5e477a87037a3855c8072b?pvs=4"
                   }
                 ],
-                "description": "Open -a Notion https://www.notion.so/dhruvindev/An-G-3dc0318fc4954ce3968fa6e9b50361ce?pvs=4",
+                "description": "Open -a Notion https://www.notion.so/dhruvindev/Andreas-49b9109d7d5e477a87037a3855c8072b?pvs=4",
                 "type": "basic",
                 "from": {
                   "key_code": "a",
@@ -561,6 +571,11 @@
                   },
                   {
                     "type": "variable_if",
+                    "name": "hyper_sublayer_semicolon",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
                     "name": "hyper_sublayer_j",
                     "value": 0
                   },
@@ -597,6 +612,11 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_a",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   },
                   {
@@ -925,6 +945,11 @@
                   },
                   {
                     "type": "variable_if",
+                    "name": "hyper_sublayer_semicolon",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
                     "name": "hyper_sublayer_j",
                     "value": 0
                   },
@@ -965,8 +990,37 @@
                   },
                   {
                     "type": "variable_if",
+                    "name": "hyper_sublayer_g",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
                     "name": "hyper_sublayer_t",
                     "value": 0
+                  }
+                ]
+              },
+              {
+                "to": [
+                  {
+                    "shell_command": "open -a 'Visual Studio Code.app'"
+                  }
+                ],
+                "description": "Open -a 'Visual Studio Code.app'",
+                "type": "basic",
+                "from": {
+                  "key_code": "v",
+                  "modifiers": {
+                    "mandatory": [
+                      "any"
+                    ]
+                  }
+                },
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_o",
+                    "value": 1
                   }
                 ]
               },
@@ -1361,6 +1415,11 @@
                   },
                   {
                     "type": "variable_if",
+                    "name": "hyper_sublayer_semicolon",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
                     "name": "hyper_sublayer_j",
                     "value": 0
                   },
@@ -1397,6 +1456,11 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_a",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   },
                   {
@@ -1652,6 +1716,11 @@
                   },
                   {
                     "type": "variable_if",
+                    "name": "hyper_sublayer_semicolon",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
                     "name": "hyper_sublayer_j",
                     "value": 0
                   },
@@ -1688,6 +1757,11 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_a",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   },
                   {
@@ -1970,6 +2044,11 @@
                   },
                   {
                     "type": "variable_if",
+                    "name": "hyper_sublayer_semicolon",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
                     "name": "hyper_sublayer_j",
                     "value": 0
                   },
@@ -2006,6 +2085,11 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_a",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   },
                   {
@@ -2285,6 +2369,11 @@
                   },
                   {
                     "type": "variable_if",
+                    "name": "hyper_sublayer_semicolon",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
                     "name": "hyper_sublayer_j",
                     "value": 0
                   },
@@ -2321,6 +2410,11 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_a",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   },
                   {
@@ -2548,6 +2642,11 @@
                   },
                   {
                     "type": "variable_if",
+                    "name": "hyper_sublayer_semicolon",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
                     "name": "hyper_sublayer_j",
                     "value": 0
                   },
@@ -2584,6 +2683,11 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_a",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   },
                   {
@@ -2888,6 +2992,11 @@
                   },
                   {
                     "type": "variable_if",
+                    "name": "hyper_sublayer_semicolon",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
                     "name": "hyper_sublayer_j",
                     "value": 0
                   },
@@ -2924,6 +3033,11 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_a",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   },
                   {
@@ -3180,6 +3294,11 @@
                   },
                   {
                     "type": "variable_if",
+                    "name": "hyper_sublayer_semicolon",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
                     "name": "hyper_sublayer_j",
                     "value": 0
                   },
@@ -3216,6 +3335,11 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_a",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   },
                   {
@@ -3501,6 +3625,11 @@
                   },
                   {
                     "type": "variable_if",
+                    "name": "hyper_sublayer_semicolon",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
                     "name": "hyper_sublayer_j",
                     "value": 0
                   },
@@ -3537,6 +3666,11 @@
                   {
                     "type": "variable_if",
                     "name": "hyper_sublayer_a",
+                    "value": 0
+                  },
+                  {
+                    "type": "variable_if",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   },
                   {
@@ -3653,6 +3787,35 @@
                     "value": 1
                   }
                 ]
+              }
+            ]
+          },
+          {
+            "description": "Hyper Key + semicolon",
+            "manipulators": [
+              {
+                "description": "Full screen layout",
+                "to": [
+                  {
+                    "key_code": "f",
+                    "modifiers": [
+                      "option",
+                      "shift"
+                    ]
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "semicolon",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "left_option"
+                    ]
+                  }
+                }
               }
             ]
           },
@@ -3865,6 +4028,34 @@
                 "type": "basic",
                 "from": {
                   "key_code": "a",
+                  "modifiers": {
+                    "mandatory": [
+                      "right_command",
+                      "right_control",
+                      "right_shift",
+                      "left_option"
+                    ]
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "description": "Hyper Key + g",
+            "manipulators": [
+              {
+                "to": [
+                  {
+                    "key_code": "g",
+                    "modifiers": [
+                      "command",
+                      "option"
+                    ]
+                  }
+                ],
+                "type": "basic",
+                "from": {
+                  "key_code": "g",
                   "modifiers": {
                     "mandatory": [
                       "right_command",
