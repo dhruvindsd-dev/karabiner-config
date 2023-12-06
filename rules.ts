@@ -1,24 +1,14 @@
 import fs from "fs";
 import { KarabinerRules } from "./types";
-import { app, createHyperSubLayers, open, openInNotion } from "./utils";
+import {
+    app,
+    createHyperSubLayers,
+    open,
+    openInNotion,
+    openKeyAlone,
+} from "./utils";
 
 const rules: KarabinerRules[] = [
-  // {
-  //   description: "additional keybinding",
-  //   manipulators: [
-  //     {
-  //       type: "basic",
-  //       from: { key_code: "l", modifiers: { mandatory: ["option"] } },
-  //       to: [{ key_code: "k", modifiers: ["option"] }],
-  //     },
-
-  //     {
-  //       type: "basic",
-  //       from: { key_code: "h", modifiers: { mandatory: ["option"] } },
-  //       to: [{ key_code: "j", modifiers: ["option"] }],
-  //     },
-  //   ],
-  // },
   {
     description: "option + tab to command + tab",
     manipulators: [
@@ -99,60 +89,40 @@ const rules: KarabinerRules[] = [
       ),
     },
     n: {
-      // d: dashboard
-      // t : thoughts (dump \ trash)
-
-      // q = Calendar
-      // w = weekly content
-      // e = clicks
+      to_if_alone: openKeyAlone("-a Notion"),
       d: open(
         "-a Notion https://www.notion.so/dhruvindev/Dashboard-2e6c31ce421a4bf89b4277b3c2c0d51a?pvs=4"
       ),
       t: open(
         "-a Notion https://www.notion.so/dhruvindev/Dump-6cc9422876f54fea8423a68a19c44fcd?pvs=4"
       ),
-      q: open(
-        "-a Notion https://www.notion.so/dhruvindev/3a639f64ba23470eb474469f43a9fece?v=b588f4ae923044cbb1c4f0f863537df4"
-      ),
-      w: open(
-        "-a Notion https://www.notion.so/dhruvindev/3a639f64ba23470eb474469f43a9fece?v=c0ecbf788d7e4810a023d356ffe5d8d8"
-      ),
-      e: open(
-        "-a Notion https://www.notion.so/dhruvindev/2a7a6c679ea8495696fb9850b5c6cced?v=499a0e4afb064d3abaa1ee3fef278b00&pvs=4"
-      ),
       i: open(
         "-a Notion https://www.notion.so/dhruvindev/Instagram-Linkedin-a475a799f03c485287d3fcf722bd0555?pvs=4"
       ),
 
       s: openInNotion(
-        "https://www.notion.so/dhruvindev/Strategic-Moves-ee72b6a83fa5417190b2abc0aeb0636d?pvs=4"
+        "https://www.notion.so/dhruvindev/Strategic-Moves-Dec-c84d1d5934164e90b8a1fdf9d83e87ac?pvs=4"
       ),
       m: openInNotion(
         "https://www.notion.so/dhruvindev/Marketing-125de4aa31ec45e3adf8c4e3089c5c39?pvs=4"
       ),
-
       l: openInNotion(
         "https://www.notion.so/dhruvindev/Lefoz-9633b03b99fd45b9a2496a98d84bb66c?pvs=4"
       ),
     },
     // o = "Open" applications
     o: {
-      v: app("Visual Studio Code"),
-      g: app("Arc"),
       a: app("Siri"),
-      d: app("Discord"),
-      t: app("iTerm"),
       s: app("Spotify"),
       p: app("Clock"),
       n: app("Notion"),
-      f: app("Figma"),
       c: app("Google Chrome"),
       j: app("Day One"),
-      k: open("https://tasksboard.com/app"),
       b: open("-a Obsidian"),
     },
 
     w: {
+      to_if_alone: openKeyAlone("-a Arc"),
       e: {
         description: "Reevaluate layout",
         to: [{ key_code: "z", modifiers: ["option", "shift"] }],
@@ -186,6 +156,7 @@ const rules: KarabinerRules[] = [
     },
     // l = layo*u*t
     q: {
+      to_if_alone: openKeyAlone("-a iTerm"),
       n: {
         description: "Cycle layouts",
         to: [{ key_code: "spacebar", modifiers: ["option", "shift"] }],
@@ -223,6 +194,7 @@ const rules: KarabinerRules[] = [
     },
     // Desktop
     d: {
+      to_if_alone: openKeyAlone("-a Discord"),
       h: {
         description: "Move to 1 screen",
         to: [
@@ -262,6 +234,7 @@ const rules: KarabinerRules[] = [
     },
     // Focus
     f: {
+      to_if_alone: openKeyAlone("-a Figma"),
       h: {
         description: "Screen 1",
         to: [
@@ -346,20 +319,12 @@ const rules: KarabinerRules[] = [
           },
         ],
       },
-      e: {
-        to: [
-          {
-            // Emoji picker
-            key_code: "spacebar",
-            modifiers: ["right_control", "right_command"],
-          },
-        ],
-      },
     },
 
     // v = "moVe" which isn't "m" because we want it to be on the left hand
     // so that hjkl work like they do in vim
     v: {
+      to_if_alone: openKeyAlone("-a Visual Studio Code"),
       h: {
         to: [{ key_code: "left_arrow" }],
       },
@@ -372,10 +337,10 @@ const rules: KarabinerRules[] = [
       l: {
         to: [{ key_code: "right_arrow" }],
       },
-      i: {
+      u: {
         to: [{ key_code: "a", modifiers: ["control"] }],
       },
-      o: {
+      i: {
         to: [{ key_code: "e", modifiers: ["control"] }],
       },
     },
@@ -453,11 +418,11 @@ const rules: KarabinerRules[] = [
       to: [{ key_code: "r", modifiers: ["left_option"] }],
     },
     a: { to: [{ key_code: "tab", modifiers: ["right_command"] }] },
-    g: { to: [{ key_code: "g", modifiers: ["command", "option"] }] },
     1: { to: [{ key_code: "1", modifiers: ["left_option"] }] },
     2: { to: [{ key_code: "2", modifiers: ["left_option"] }] },
     3: { to: [{ key_code: "3", modifiers: ["left_option"] }] },
-    t: app("Stickies"),
+    t: app("iTerm"),
+    g: app("Arc"),
   }),
 ];
 

@@ -4,7 +4,8 @@ import { KarabinerRules, KeyCode, Manipulator, To } from "./types";
  * Custom way to describe a command in a layer
  */
 export interface LayerCommand {
-  to: To[];
+  to?: To[];
+  to_if_alone?: To[];
   description?: string;
 }
 
@@ -21,7 +22,8 @@ type HyperKeySublayer = {
 export function createHyperSubLayer(
   sublayer_key: KeyCode,
   commands: HyperKeySublayer,
-  allSubLayerVariables: string[]
+  allSubLayerVariables: string[],
+  to_if_alone?: To[]
 ): Manipulator[] {
   const subLayerVariableName = generateSubLayerVariableName(sublayer_key);
 
@@ -59,6 +61,7 @@ export function createHyperSubLayer(
           },
         },
       ],
+      to_if_alone,
       // This enables us to press other sublayer keys in the current sublayer
       // (e.g. Hyper + O > M even though Hyper + M is also a sublayer)
       // basically, only trigger a sublayer if no other sublayer is active
@@ -107,38 +110,43 @@ export function createHyperSubLayers(subLayers: {
     Object.keys(subLayers) as (keyof typeof subLayers)[]
   ).map((sublayer_key) => generateSubLayerVariableName(sublayer_key));
 
-  return Object.entries(subLayers).map(([key, value]) =>
-    "to" in value
-      ? {
-          description: `Hyper Key + ${key}`,
-          manipulators: [
-            {
-              ...value,
-              type: "basic" as const,
-              from: {
-                key_code: key as KeyCode,
-                modifiers: {
-                  // Mandatory modifiers are *not* added to the "to" event
-                  mandatory: [
-                    "right_command",
-                    "right_control",
-                    "right_shift",
-                    "left_option",
-                  ],
-                },
+  return Object.entries(subLayers).map(([key, value]) => {
+    if ("to" in value)
+      return {
+        description: `Hyper Key + ${key}`,
+        manipulators: [
+          {
+            ...value,
+            type: "basic" as const,
+            from: {
+              key_code: key as KeyCode,
+              modifiers: {
+                // Mandatory modifiers are *not* added to the "to" event
+                mandatory: [
+                  "right_command",
+                  "right_control",
+                  "right_shift",
+                  "left_option",
+                ],
               },
             },
-          ],
-        }
-      : {
-          description: `Hyper Key sublayer "${key}"`,
-          manipulators: createHyperSubLayer(
-            key as KeyCode,
-            value,
-            allSubLayerVariables
-          ),
-        }
-  );
+          },
+        ],
+      };
+    else {
+      const to_if_alone = value["to_if_alone"];
+      delete value["to_if_alone"];
+      return {
+        description: `Hyper Key sublayer "${key}"`,
+        manipulators: createHyperSubLayer(
+          key as KeyCode,
+          value,
+          allSubLayerVariables,
+          to_if_alone
+        ),
+      };
+    }
+  });
 }
 
 function generateSubLayerVariableName(key: KeyCode) {
@@ -157,6 +165,17 @@ export function open(what: string): LayerCommand {
     ],
     description: `Open ${what}`,
   };
+}
+
+/**
+ * Shortcut for "open" shell command for to_if_alone
+ */
+export function openKeyAlone(what: string): To[] {
+  return [
+    {
+      shell_command: `open ${what}`,
+    },
+  ];
 }
 
 export function openInNotion(link: string): LayerCommand {

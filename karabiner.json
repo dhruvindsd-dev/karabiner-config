@@ -362,12 +362,12 @@
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_g",
+                    "name": "hyper_sublayer_t",
                     "value": 0
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_t",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   }
                 ]
@@ -503,6 +503,11 @@
                     }
                   }
                 ],
+                "to_if_alone": [
+                  {
+                    "shell_command": "open -a Notion"
+                  }
+                ],
                 "conditions": [
                   {
                     "type": "variable_if",
@@ -616,12 +621,12 @@
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_g",
+                    "name": "hyper_sublayer_t",
                     "value": 0
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_t",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   }
                 ]
@@ -677,78 +682,6 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a Notion https://www.notion.so/dhruvindev/3a639f64ba23470eb474469f43a9fece?v=b588f4ae923044cbb1c4f0f863537df4"
-                  }
-                ],
-                "description": "Open -a Notion https://www.notion.so/dhruvindev/3a639f64ba23470eb474469f43a9fece?v=b588f4ae923044cbb1c4f0f863537df4",
-                "type": "basic",
-                "from": {
-                  "key_code": "q",
-                  "modifiers": {
-                    "mandatory": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_n",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a Notion https://www.notion.so/dhruvindev/3a639f64ba23470eb474469f43a9fece?v=c0ecbf788d7e4810a023d356ffe5d8d8"
-                  }
-                ],
-                "description": "Open -a Notion https://www.notion.so/dhruvindev/3a639f64ba23470eb474469f43a9fece?v=c0ecbf788d7e4810a023d356ffe5d8d8",
-                "type": "basic",
-                "from": {
-                  "key_code": "w",
-                  "modifiers": {
-                    "mandatory": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_n",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a Notion https://www.notion.so/dhruvindev/2a7a6c679ea8495696fb9850b5c6cced?v=499a0e4afb064d3abaa1ee3fef278b00&pvs=4"
-                  }
-                ],
-                "description": "Open -a Notion https://www.notion.so/dhruvindev/2a7a6c679ea8495696fb9850b5c6cced?v=499a0e4afb064d3abaa1ee3fef278b00&pvs=4",
-                "type": "basic",
-                "from": {
-                  "key_code": "e",
-                  "modifiers": {
-                    "mandatory": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_n",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
                     "shell_command": "open -a Notion https://www.notion.so/dhruvindev/Instagram-Linkedin-a475a799f03c485287d3fcf722bd0555?pvs=4"
                   }
                 ],
@@ -773,10 +706,10 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a Notion https://www.notion.so/dhruvindev/Strategic-Moves-ee72b6a83fa5417190b2abc0aeb0636d?pvs=4"
+                    "shell_command": "open -a Notion https://www.notion.so/dhruvindev/Strategic-Moves-Dec-c84d1d5934164e90b8a1fdf9d83e87ac?pvs=4"
                   }
                 ],
-                "description": "Open -a Notion https://www.notion.so/dhruvindev/Strategic-Moves-ee72b6a83fa5417190b2abc0aeb0636d?pvs=4",
+                "description": "Open -a Notion https://www.notion.so/dhruvindev/Strategic-Moves-Dec-c84d1d5934164e90b8a1fdf9d83e87ac?pvs=4",
                 "type": "basic",
                 "from": {
                   "key_code": "s",
@@ -990,61 +923,13 @@
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_g",
+                    "name": "hyper_sublayer_t",
                     "value": 0
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_t",
+                    "name": "hyper_sublayer_g",
                     "value": 0
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Visual Studio Code.app'"
-                  }
-                ],
-                "description": "Open -a 'Visual Studio Code.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "v",
-                  "modifiers": {
-                    "mandatory": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Arc.app'"
-                  }
-                ],
-                "description": "Open -a 'Arc.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "g",
-                  "modifiers": {
-                    "mandatory": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
                   }
                 ]
               },
@@ -1058,54 +943,6 @@
                 "type": "basic",
                 "from": {
                   "key_code": "a",
-                  "modifiers": {
-                    "mandatory": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'Discord.app'"
-                  }
-                ],
-                "description": "Open -a 'Discord.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "d",
-                  "modifiers": {
-                    "mandatory": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open -a 'iTerm.app'"
-                  }
-                ],
-                "description": "Open -a 'iTerm.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "t",
                   "modifiers": {
                     "mandatory": [
                       "any"
@@ -1195,30 +1032,6 @@
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Figma.app'"
-                  }
-                ],
-                "description": "Open -a 'Figma.app'",
-                "type": "basic",
-                "from": {
-                  "key_code": "f",
-                  "modifiers": {
-                    "mandatory": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
                     "shell_command": "open -a 'Google Chrome.app'"
                   }
                 ],
@@ -1250,30 +1063,6 @@
                 "type": "basic",
                 "from": {
                   "key_code": "j",
-                  "modifiers": {
-                    "mandatory": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_o",
-                    "value": 1
-                  }
-                ]
-              },
-              {
-                "to": [
-                  {
-                    "shell_command": "open https://tasksboard.com/app"
-                  }
-                ],
-                "description": "Open https://tasksboard.com/app",
-                "type": "basic",
-                "from": {
-                  "key_code": "k",
                   "modifiers": {
                     "mandatory": [
                       "any"
@@ -1345,6 +1134,11 @@
                       "name": "hyper_sublayer_w",
                       "value": 1
                     }
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "shell_command": "open -a Arc"
                   }
                 ],
                 "conditions": [
@@ -1460,12 +1254,12 @@
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_g",
+                    "name": "hyper_sublayer_t",
                     "value": 0
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_t",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   }
                 ]
@@ -1648,6 +1442,11 @@
                     }
                   }
                 ],
+                "to_if_alone": [
+                  {
+                    "shell_command": "open -a iTerm"
+                  }
+                ],
                 "conditions": [
                   {
                     "type": "variable_if",
@@ -1761,12 +1560,12 @@
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_g",
+                    "name": "hyper_sublayer_t",
                     "value": 0
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_t",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   }
                 ]
@@ -1976,6 +1775,11 @@
                     }
                   }
                 ],
+                "to_if_alone": [
+                  {
+                    "shell_command": "open -a Discord"
+                  }
+                ],
                 "conditions": [
                   {
                     "type": "variable_if",
@@ -2089,12 +1893,12 @@
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_g",
+                    "name": "hyper_sublayer_t",
                     "value": 0
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_t",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   }
                 ]
@@ -2301,6 +2105,11 @@
                     }
                   }
                 ],
+                "to_if_alone": [
+                  {
+                    "shell_command": "open -a Figma"
+                  }
+                ],
                 "conditions": [
                   {
                     "type": "variable_if",
@@ -2414,12 +2223,12 @@
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_g",
+                    "name": "hyper_sublayer_t",
                     "value": 0
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_t",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   }
                 ]
@@ -2687,12 +2496,12 @@
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_g",
+                    "name": "hyper_sublayer_t",
                     "value": 0
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_t",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   }
                 ]
@@ -2861,33 +2670,6 @@
                     "value": 1
                   }
                 ]
-              },
-              {
-                "to": [
-                  {
-                    "key_code": "spacebar",
-                    "modifiers": [
-                      "right_control",
-                      "right_command"
-                    ]
-                  }
-                ],
-                "type": "basic",
-                "from": {
-                  "key_code": "e",
-                  "modifiers": {
-                    "mandatory": [
-                      "any"
-                    ]
-                  }
-                },
-                "conditions": [
-                  {
-                    "type": "variable_if",
-                    "name": "hyper_sublayer_s",
-                    "value": 1
-                  }
-                ]
               }
             ]
           },
@@ -2922,6 +2704,11 @@
                       "name": "hyper_sublayer_v",
                       "value": 1
                     }
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "shell_command": "open -a Visual Studio Code"
                   }
                 ],
                 "conditions": [
@@ -3037,12 +2824,12 @@
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_g",
+                    "name": "hyper_sublayer_t",
                     "value": 0
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_t",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   }
                 ]
@@ -3150,7 +2937,7 @@
                 ],
                 "type": "basic",
                 "from": {
-                  "key_code": "i",
+                  "key_code": "u",
                   "modifiers": {
                     "mandatory": [
                       "any"
@@ -3176,7 +2963,7 @@
                 ],
                 "type": "basic",
                 "from": {
-                  "key_code": "o",
+                  "key_code": "i",
                   "modifiers": {
                     "mandatory": [
                       "any"
@@ -3339,12 +3126,12 @@
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_g",
+                    "name": "hyper_sublayer_t",
                     "value": 0
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_t",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   }
                 ]
@@ -3670,12 +3457,12 @@
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_g",
+                    "name": "hyper_sublayer_t",
                     "value": 0
                   },
                   {
                     "type": "variable_if",
-                    "name": "hyper_sublayer_t",
+                    "name": "hyper_sublayer_g",
                     "value": 0
                   }
                 ]
@@ -4041,21 +3828,18 @@
             ]
           },
           {
-            "description": "Hyper Key + g",
+            "description": "Hyper Key + t",
             "manipulators": [
               {
                 "to": [
                   {
-                    "key_code": "g",
-                    "modifiers": [
-                      "command",
-                      "option"
-                    ]
+                    "shell_command": "open -a 'iTerm.app'"
                   }
                 ],
+                "description": "Open -a 'iTerm.app'",
                 "type": "basic",
                 "from": {
-                  "key_code": "g",
+                  "key_code": "t",
                   "modifiers": {
                     "mandatory": [
                       "right_command",
@@ -4069,18 +3853,18 @@
             ]
           },
           {
-            "description": "Hyper Key + t",
+            "description": "Hyper Key + g",
             "manipulators": [
               {
                 "to": [
                   {
-                    "shell_command": "open -a 'Stickies.app'"
+                    "shell_command": "open -a 'Arc.app'"
                   }
                 ],
-                "description": "Open -a 'Stickies.app'",
+                "description": "Open -a 'Arc.app'",
                 "type": "basic",
                 "from": {
-                  "key_code": "t",
+                  "key_code": "g",
                   "modifiers": {
                     "mandatory": [
                       "right_command",
