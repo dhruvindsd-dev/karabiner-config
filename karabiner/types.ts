@@ -17,6 +17,8 @@ export interface Manipulator {
 
 export interface Parameters {
   'basic.simultaneous_threshold_milliseconds'?: number
+  'basic.to_if_alone_timeout_milliseconds'?: number
+  'basic.to_if_held_down_threshold_milliseconds'?: number
 }
 
 export type Conditions =

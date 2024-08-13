@@ -1,9 +1,11 @@
 import fs from 'fs'
-import { AMETHYST } from './rules/amethyst'
+import { DOUBLE_TAP_SHIFTS } from './rules/double-tap-shifts'
 import { mainWorkflow } from './rules/main-workflow'
 import { superLayer } from './rules/super-layer'
+import { WINDOW_MANAGEMENT } from './rules/window-management'
 import { KarabinerRules } from './types'
 import {
+    L,
     app,
     createHyperSubLayers,
     open,
@@ -52,61 +54,7 @@ const rules: KarabinerRules[] = [
         },
         to: [{ key_code: 'delete_or_backspace', modifiers: ['command'] }],
       },
-      {
-        type: 'basic',
-        from: {
-          key_code: 'right_shift',
-          modifiers: {
-            optional: ['any'],
-          },
-        },
-        to: openKeyAlone("-a 'ChatGPT'"),
-        conditions: [
-          {
-            type: 'variable_if',
-            name: 'right_shift pressed',
-            value: 1,
-          },
-        ],
-      },
-      {
-        type: 'basic',
-        from: {
-          key_code: 'right_shift',
-          modifiers: {
-            optional: ['any'],
-          },
-        },
-        to: [
-          {
-            set_variable: {
-              name: 'right_shift pressed',
-              value: 1,
-            },
-          },
-          {
-            key_code: 'right_shift',
-          },
-        ],
-        to_delayed_action: {
-          to_if_invoked: [
-            {
-              set_variable: {
-                name: 'right_shift pressed',
-                value: 0,
-              },
-            },
-          ],
-          to_if_canceled: [
-            {
-              set_variable: {
-                name: 'right_shift pressed',
-                value: 0,
-              },
-            },
-          ],
-        },
-      },
+      ...DOUBLE_TAP_SHIFTS,
     ],
   },
   {
@@ -138,8 +86,9 @@ const rules: KarabinerRules[] = [
       },
     ],
   },
+
+  ...WINDOW_MANAGEMENT,
   ...createHyperSubLayers({
-    ...AMETHYST,
     //  Notion Projects
     p: {
       to_if_alone: [
@@ -327,19 +276,17 @@ const rules: KarabinerRules[] = [
     },
 
     // single keys
-    l: { to_if_alone: [{ key_code: 'right_arrow', modifiers: ['option'] }] },
-    h: { to_if_alone: [{ key_code: 'left_arrow', modifiers: ['option'] }] },
-    j: { to_if_alone: [{ key_code: 'down_arrow' }] },
-    k: { to_if_alone: [{ key_code: 'up_arrow' }] },
-    u: { to_if_alone: [{ key_code: 'a', modifiers: ['control'] }] },
-    i: { to_if_alone: [{ key_code: 'e', modifiers: ['control'] }] },
-
-    1: { to: [{ key_code: '1', modifiers: ['left_option'] }] },
-    2: { to: [{ key_code: '2', modifiers: ['left_option'] }] },
-    3: { to: [{ key_code: '3', modifiers: ['left_option'] }] },
+    //
+    h: L('left_arrow', ['option']),
+    l: L('right_arrow', ['option']),
+    j: L('down_arrow', []),
+    k: L('up_arrow', []),
+    u: L('a', ['control']),
+    i: L('e', ['control']),
 
     r: app('Raycast'),
     g: app('Arc'),
+    f: app('Figma'),
     t: open('raycast://extensions/reboot/hypersonic/index'),
   }),
   ...superLayer,
