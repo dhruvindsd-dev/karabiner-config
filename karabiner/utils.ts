@@ -194,7 +194,7 @@ export function openKeyAlone(what: string): To[] {
 }
 
 export function openInNotion(link: string): LayerCommand {
-  return open(`-a Notion ${link}`)
+  return open(`${link.replace('https', 'notion')}`)
 }
 /**
  * Shortcut for "Open an app" command (of which there are a bunch)

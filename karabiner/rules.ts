@@ -52,61 +52,6 @@ const rules: KarabinerRules[] = [
         },
         to: [{ key_code: 'delete_or_backspace', modifiers: ['command'] }],
       },
-      {
-        type: 'basic',
-        from: {
-          key_code: 'right_shift',
-          modifiers: {
-            optional: ['any'],
-          },
-        },
-        to: openKeyAlone("-a 'ChatGPT'"),
-        conditions: [
-          {
-            type: 'variable_if',
-            name: 'right_shift pressed',
-            value: 1,
-          },
-        ],
-      },
-      {
-        type: 'basic',
-        from: {
-          key_code: 'right_shift',
-          modifiers: {
-            optional: ['any'],
-          },
-        },
-        to: [
-          {
-            set_variable: {
-              name: 'right_shift pressed',
-              value: 1,
-            },
-          },
-          {
-            key_code: 'right_shift',
-          },
-        ],
-        to_delayed_action: {
-          to_if_invoked: [
-            {
-              set_variable: {
-                name: 'right_shift pressed',
-                value: 0,
-              },
-            },
-          ],
-          to_if_canceled: [
-            {
-              set_variable: {
-                name: 'right_shift pressed',
-                value: 0,
-              },
-            },
-          ],
-        },
-      },
     ],
   },
   {
@@ -229,10 +174,12 @@ const rules: KarabinerRules[] = [
       v: app('Visual Studio Code'),
       u: app('QuickTime Player'),
       r: app('Postman'),
-      p: { to: [{ shell_command: "shortcuts run 'Awesome Pomodoro'" }] },
+      p: { to: [{ shell_command: "shortcuts run 'Raycast pomodoro' &" }] },
+      //p: open('raycast://extensions/asubbotin/pomodoro/pomodoro-control-timer'),
       x: { to: [{ shell_command: "open -a Arc 'https://x.com'" }] },
       g: { to: [{ shell_command: "open -a Arc 'https://chat.openai.com/'" }] },
       e: app('Endel'),
+      i: app('Messages'),
     },
     s: {
       to_if_alone: openKeyAlone('-a Screenshot'),
@@ -302,28 +249,16 @@ const rules: KarabinerRules[] = [
     },
     c: {
       to_if_alone: openKeyAlone("-a 'Notion Calendar'"),
-      p: {
-        to: [{ key_code: 'play_or_pause' }],
-      },
-      n: {
-        to: [{ key_code: 'fastforward' }],
-      },
-      b: {
-        to: [{ key_code: 'rewind' }],
-      },
+      p: { to: [{ key_code: 'play_or_pause' }] },
+      n: { to: [{ key_code: 'fastforward' }] },
+      b: { to: [{ key_code: 'rewind' }] },
       // select word by word
-      h: {
-        to: [{ key_code: 'left_arrow', modifiers: ['shift', 'option'] }],
-      },
-      j: {
-        to: [{ key_code: 'down_arrow', modifiers: ['shift', 'option'] }],
-      },
-      k: {
-        to: [{ key_code: 'up_arrow', modifiers: ['shift', 'option'] }],
-      },
-      l: {
-        to: [{ key_code: 'right_arrow', modifiers: ['shift', 'option'] }],
-      },
+      h: { to: [{ key_code: 'left_arrow', modifiers: ['shift', 'option'] }] },
+      j: { to: [{ key_code: 'down_arrow', modifiers: ['shift', 'option'] }] },
+      k: { to: [{ key_code: 'up_arrow', modifiers: ['shift', 'option'] }] },
+      l: { to: [{ key_code: 'right_arrow', modifiers: ['shift', 'option'] }] },
+      u: { to: [{ key_code: 'a', modifiers: ['left_control', 'shift'] }] },
+      i: { to: [{ key_code: 'e', modifiers: ['left_control', 'shift'] }] },
     },
 
     // single keys

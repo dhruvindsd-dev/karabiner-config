@@ -20,7 +20,8 @@ export const AMETHYST: subLayersType = {
   },
   d: {
     // toggle dev window position
-    to_if_alone: [{ key_code: 'd', modifiers: ['option', 'shift'] }],
+    to_if_alone: [{ key_code: 'l', modifiers: ['command', 'shift'] }],
+
     j: L('q', mod2, 'Move to Screen 1'),
     l: L('w', mod2, 'Move to Screen 2'),
     // l: L('e', mod2, 'Move to Screen 3'),
