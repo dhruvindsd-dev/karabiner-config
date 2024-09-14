@@ -100,7 +100,7 @@ const rules: KarabinerRules[] = [
       n: openInNotion(
         'https://www.notion.so/dhruvindev/Nexa-Event-644cb03b9e7046cd956c8896002285b2?pvs=4'
       ),
-      f: openInNotion(
+      g: openInNotion(
         'https://www.notion.so/14d5c3f91a9b4a6f99960055072124d8?v=925c20de3f1147c5a2bcea5642d67e08&pvs=4'
       ),
       a: openInNotion(
@@ -178,101 +178,46 @@ const rules: KarabinerRules[] = [
       v: app('Visual Studio Code'),
       u: app('QuickTime Player'),
       r: app('Postman'),
-      p: { to: [{ shell_command: "shortcuts run 'Awesome Pomodoro'" }] },
+      p: { to: [{ shell_command: "shortcuts run 'Raycast Pomodoro' & " }] },
       x: { to: [{ shell_command: "open -a Arc 'https://x.com'" }] },
       g: { to: [{ shell_command: "open -a Arc 'https://chat.openai.com/'" }] },
       e: app('Endel'),
     },
     s: {
       to_if_alone: openKeyAlone('-a Screenshot'),
-      u: {
-        to: [
-          {
-            key_code: 'volume_increment',
-          },
-        ],
-      },
-      j: {
-        to: [
-          {
-            key_code: 'volume_decrement',
-          },
-        ],
-      },
-      i: {
-        to: [
-          {
-            key_code: 'display_brightness_increment',
-          },
-        ],
-      },
-      k: {
-        to: [
-          {
-            key_code: 'display_brightness_decrement',
-          },
-        ],
-      },
+      u: { to: [{ key_code: 'volume_increment' }] },
+      j: { to: [{ key_code: 'volume_decrement' }] },
+      i: { to: [{ key_code: 'display_brightness_increment' }] },
+      k: { to: [{ key_code: 'display_brightness_decrement' }] },
       l: {
-        to: [
-          {
-            key_code: 'q',
-            modifiers: ['right_control', 'right_command'],
-          },
-        ],
+        to: [{ key_code: 'q', modifiers: ['right_control', 'right_command'] }],
       },
-      p: {
-        to: [
-          {
-            key_code: 'play_or_pause',
-          },
-        ],
-      },
+      p: { to: [{ key_code: 'play_or_pause' }] },
     },
     v: {
-      j: {
-        to: [{ key_code: 'down_arrow' }],
-      },
-      k: {
-        to: [{ key_code: 'up_arrow' }],
-      },
-      h: {
-        to: [{ key_code: 'left_arrow' }],
-      },
+      j: { to: [{ key_code: 'down_arrow' }] },
+      k: { to: [{ key_code: 'up_arrow' }] },
+      h: { to: [{ key_code: 'left_arrow' }] },
       l: {
         to_if_alone: [{ key_code: 'right_arrow' }],
         to_if_held_down: [
-          {
-            key_code: 'q',
-            modifiers: ['right_control', 'right_command'],
-          },
+          { key_code: 'q', modifiers: ['right_control', 'right_command'] },
         ],
       },
     },
     c: {
       to_if_alone: openKeyAlone("-a 'Notion Calendar'"),
-      p: {
-        to: [{ key_code: 'play_or_pause' }],
-      },
-      n: {
-        to: [{ key_code: 'fastforward' }],
-      },
-      b: {
-        to: [{ key_code: 'rewind' }],
-      },
+      p: { to: [{ key_code: 'play_or_pause' }] },
+      n: { to: [{ key_code: 'fastforward' }] },
+      b: { to: [{ key_code: 'rewind' }] },
       // select word by word
-      h: {
-        to: [{ key_code: 'left_arrow', modifiers: ['shift', 'option'] }],
-      },
-      j: {
-        to: [{ key_code: 'down_arrow', modifiers: ['shift', 'option'] }],
-      },
-      k: {
-        to: [{ key_code: 'up_arrow', modifiers: ['shift', 'option'] }],
-      },
-      l: {
-        to: [{ key_code: 'right_arrow', modifiers: ['shift', 'option'] }],
-      },
+      h: { to: [{ key_code: 'left_arrow', modifiers: ['shift', 'option'] }] },
+      j: { to: [{ key_code: 'down_arrow', modifiers: ['shift', 'option'] }] },
+      k: { to: [{ key_code: 'up_arrow', modifiers: ['shift', 'option'] }] },
+      l: { to: [{ key_code: 'right_arrow', modifiers: ['shift', 'option'] }] },
+
+      u: { to: [{ key_code: 'a', modifiers: ['control', 'shift'] }] },
+      i: { to: [{ key_code: 'e', modifiers: ['control', 'shift'] }] },
     },
 
     // single keys

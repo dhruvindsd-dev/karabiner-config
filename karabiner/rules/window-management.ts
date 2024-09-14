@@ -1,5 +1,5 @@
 import { Conditions, KarabinerRules, KeyCode, Manipulator, To } from '../types'
-import { L, createHyperSubLayers } from '../utils'
+import { L, createHyperSubLayers, openKeyAlone } from '../utils'
 
 const mod0 = ['option']
 const mod1 = ['option', 'shift']
@@ -21,7 +21,7 @@ const bind = (key_code: KeyCode, to: To[]): Manipulator => ({
 export const WINDOW_MANAGEMENT: KarabinerRules[] = [
   ...createHyperSubLayers({
     f: {
-      to_if_alone: [{ key_code: 'r', modifiers: mod2 }],
+      to_if_alone: openKeyAlone('-a Figma'),
       h: L('h', mod2),
       j: L('j', mod2, 'Swap anit-clockwise '),
       k: L('k', mod2, 'Swap anit-clockwise '),
@@ -37,6 +37,7 @@ export const WINDOW_MANAGEMENT: KarabinerRules[] = [
     },
 
     // single keys
+    d: { to_if_alone: [{ key_code: 'r', modifiers: mod2 }] },
     m: { to_if_alone: [{ key_code: 'f', modifiers: mod2 }] },
     1: { to: [{ key_code: '1', modifiers: mod0 }] },
     2: { to: [{ key_code: '2', modifiers: mod0 }] },
@@ -69,5 +70,4 @@ export const WINDOW_MANAGEMENT: KarabinerRules[] = [
       bind('m', [{ key_code: 'f', modifiers: mod2 }]),
     ],
   },
-      
 ]
