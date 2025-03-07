@@ -42,7 +42,7 @@ type DeviceCondition = {
     | 'device_unless'
     | 'device_exists_if'
     | 'device_exists_unless'
-  identifiers: Identifiers
+  identifiers: Identifiers[]
   description?: string
 }
 
@@ -101,6 +101,7 @@ export interface From {
   simultaneous?: SimultaneousFrom[]
   simultaneous_options?: SimultaneousOptions
   modifiers?: Modifiers
+  pointing_button?: 'button1' | 'button2' | 'button3' | 'button4' | 'button5'
 }
 
 export interface Modifiers {
@@ -110,6 +111,7 @@ export interface Modifiers {
 
 export interface To {
   key_code?: KeyCode
+  pointing_button?: 'button1' | 'button2' | 'button3' | 'button4' | 'button5'
   modifiers?: string[]
   hold_down_milliseconds?: number
   shell_command?: string
